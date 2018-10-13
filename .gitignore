@@ -1,0 +1,6 @@
+bundle
+*.bak
+*.bk
+configs
+myconfig.sh
+init.vim
