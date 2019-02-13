@@ -50,6 +50,8 @@ Plug 'Valloric/YouCompleteMe'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+Plug 'Yggdroot/indentLine'
+
 " 括号显示增强
 Plug 'kien/rainbow_parentheses.vim'
 
@@ -120,6 +122,12 @@ call plug#end()
     if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
         let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
     endif
+
+    let g:ycm_enable_diagnostic_signs = 0
+    let g:ycm_enable_diagnostic_highlighting = 0
+
+    " 停止提示是否载入本地ycm_extra_conf文件
+    let g:ycm_confirm_extra_conf = 0
 
     " 直接触发自动补全 insert模式下
     " let g:ycm_key_invoke_completion = '<C-Space>'
